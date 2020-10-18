@@ -1,0 +1,134 @@
+
+.home-content {
+  z-index: 500;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  transition: all 1s;
+  .home-button {
+    text-align: center;
+    opacity: 0;
+    &.show-button{
+        animation: fade-button 1s;
+        opacity: 1;
+    }
+  }
+  &.hide{
+    opacity: 0;
+  }
+  button {
+    margin-top: 5px;
+    transition: all 0.3s ease;
+    color: #fff;
+    border: 3px solid white;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    font-size: 17px;
+    background-color: transparent;
+    padding: 10px;
+    outline: none;
+    border-radius: 4px;
+    font-weight: 550;
+
+    &:hover {
+      transition: all 1s ease;
+      color: #004080;
+      background-color: #fff;
+      border: 3px solid #004080;
+    }
+  }
+}
+.home-avatar {
+  animation: fade 2s;
+  text-align: center;
+  position: relative;
+  img {
+    width: 150px;
+    transition: all .5s;
+    z-index: 100;
+    transform: translate(-50%,-100%);
+    position: absolute;
+    left: 50%;
+    &:hover{
+        transform: translate(-50%,-100%) scale(1.1);
+    }
+  }
+  &::before{
+    content: '';
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 15px solid rgba(55,140,63,0.6);
+    z-index: 50;
+    transform: translate(-50%,-100%);
+    position: absolute;
+    left: 50%;
+    animation: pulse 2s infinite;
+}
+}
+.typewriter h1 {
+  padding: 15px 0;
+  pointer-events: none;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  // border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes fade-button {
+    0%{
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+    100% {
+      opacity: 100%;
+      transform: translateX(0);
+    }
+  }
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 0;
+    }
+    100% {
+      opacity: 100%;
+    }
+  }
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  40% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(55,140,63,0.6);
+    }
+    70% {
+        box-shadow: 0 0 0 12px rgba(55,140,63,0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(55,140,63,0);
+    }
+  }
+
+/* The typewriter cursor effect */
+//   @keyframes blink-caret {
+//     from, to { border-color: transparent }
+//     50% { border-color: orange; }
+
+//   }

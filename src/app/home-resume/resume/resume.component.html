@@ -1,0 +1,45 @@
+<div class="resume">
+  <div class="nav-bar" [ngClass]='{"show-nav":isShow}'>
+    <div class="nav-item  ">
+      <div class="nav-img">
+        <img src="/assets/image/avatar_luong.png" alt="">
+      </div>
+    </div>
+    <div class="nav-item" (click)="changeContent('about',1)">
+      <a [ngClass]="{'active':content=='about'}"  >
+        <i class="fas fa-user"></i>
+        About me
+      </a>
+    </div>
+    <div class="nav-item" (click)="changeContent('ex')">
+      <a [ngClass]="{'active':content=='ex'}" >
+        <i class="fas fa-address-card"></i>
+        Resume
+      </a>
+    </div>
+    <div class="nav-item" (click)="changeContent('contact')">
+      <a [ngClass]="{'active':content=='contact'}"  >
+        <i class="fas fa-id-badge"></i>
+        Contact
+      </a>
+    </div>
+    <div class="nav-item contact d-flex">
+      <div class="contact-item">
+        <i class="fab fa-facebook-square"></i>
+      </div>
+      <div class="contact-item">
+        <i class="fab fa-github-square"></i>
+      </div>
+      <div class="contact-item">
+        <i class="fab fa-twitter-square"></i>
+      </div>
+    </div>
+  </div>
+  <div class="resume-content" [ngClass]='{"show-content":isShowContent}'>
+    <div class="border-top"></div>
+    <app-about *ngIf="content=='about'" [isShowFirst]='isShowFirst' ></app-about>
+    <app-ex-project *ngIf="content=='ex'"></app-ex-project>
+    <app-contact  *ngIf="content=='contact'"></app-contact>
+    <!-- <img src="../../../assets/image/avatar_luong.png" alt=""> -->
+  </div>
+</div>

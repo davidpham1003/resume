@@ -1,0 +1,86 @@
+html,
+body,
+div,
+span,
+canvas {
+  margin: 0;
+  padding: 0;
+}
+#container {
+  overflow: hidden;
+  position: relative;
+
+  height: 100%;
+  max-width: 100%;
+  background-image: url("../../assets/image/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  max-height: 100vh;
+  width: 100vw;
+
+}
+
+#pixie {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+//******************************************************
+// Like it if you like it :) Thank you
+// Best viewed in fullscreen
+// https://codepen.io/nocni_sovac/full/MWwBqJV
+//******************************************************
+
+//******************************************************
+// Like it if you like it :) Thank you
+// Best viewed in fullscreen
+// https://codepen.io/nocni_sovac/full/MWwBqJV
+//******************************************************
+
+// @import url("https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap");
+
+// * {
+//   margin: 0;
+//   padding: 0;
+//   background: radial-gradient(
+//     circle,
+//     #342c2c,
+//     #2b2527,
+//     #221f20,
+//     #191819,
+//     #111111
+//   );
+// }
+
+// body {
+//   font-family: "Gloria Hallelujah", cursive;
+//   color: #20e3a2;
+//   font-size: 30px;
+//   min-height: 100vh;
+//   user-select: none;
+// }
+
+div {
+  // border-radius: 100%;
+  // position: absolute;
+  // pointer-events: none;
+  // background: #20e3a2;
+  // box-shadow: 10px 10px 30px #31c8a2, -10px -10px 30px #31c8a2;
+  // transform: translate(-50%, -50%);
+  // animation: colorgen 1s infinite;
+}
+
+@keyframes colorgen {
+  0% {
+    opacity: 1;
+    filter: blur(5px);
+  }
+  100% {
+    opacity: 0;
+    filter: blur(0);
+    color: rgb(170, 170, 22);
+  }
+}

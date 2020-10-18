@@ -1,0 +1,71 @@
+<div class="ex-project">
+    <h1 class="title">RESUME !</h1>
+    <hr class="style-seven">
+    <div class="scroll" id="style-4">
+        <div class="row exp-content">
+            <div class="col-6 ex">
+                <div class="ex-title title">
+                    <h2>Experience</h2>
+                </div>
+                <div class="ex-content">
+                    <div class="item ">
+                        <div class="ex-left line"></div>
+                        <div class="ex-right text">
+                            <h3>Internship</h3>
+                            <h5>CyberSoft Academy</h5>
+                            <p>Studying and working as an intern at CyberSoft Academy</p>
+                        </div>
+                        <div class="year">
+                            <p class="to">On going</p>
+                            <p class="from">Mar 2020</p>
+                        </div>
+                    </div>
+                    <div class="item ">
+                        <div class="ex-left line"></div>
+                        <div class="ex-right text">
+                            <h3>Freelance</h3>
+                            <h5>ITViec,Facebook IT</h5>
+                            <p>Freelance work in the field of website design, discussing and consulting with clients to
+                                develop website</p>
+                        </div>
+                        <div class="year">
+                            <p class="to">On going</p>
+                            <p class="from">Oct 2019</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 project">
+                <h2 class="title project-title">
+                    Project
+                </h2>
+                <div class="project-content">
+                    <div class="item " *ngFor="let data of project;let index = index">
+                        <div class="ex-left line"></div>
+                        <div class="ex-right text">
+                            <h3>{{data.fw}}</h3>
+                            <div class="project-data pl-3" *ngFor="let projectItem of data.projects;let j = index">
+                                <h5>{{projectItem.title}}</h5>
+                                <p class="mb-1">- {{projectItem.des}}</p>
+                                <p class="mb-1">- {{projectItem.use}}</p>
+                                <div class="function pl-3" *ngIf="data.projects[j].funcs">
+                                    <h5>Function</h5>
+                                    <p *ngFor="let funcItem of data.projects[j].funcs" class="mb-1"> + {{funcItem.name}}
+                                        : {{funcItem.desFunc}} </p>
+                                </div>
+                                <p class="mb-2">
+                                    <i class="fas fa-link"></i><a [href]="project.link" target="_blank"  class="pl-1 link">
+                                        {{projectItem.link}} </a>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- <div class="year">
+                            <p class="to">On going</p>
+                            <p class="from">Mar 2020</p>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
